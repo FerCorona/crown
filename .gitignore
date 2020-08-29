@@ -4,7 +4,6 @@
 .env.test.local
 .env.production.local
 .vscode/*
-/examples
 
 node_modules
 examples/form
