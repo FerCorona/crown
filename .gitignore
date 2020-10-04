@@ -4,6 +4,7 @@
 .env.test.local
 .env.production.local
 .vscode/*
+.npmrc
 
 node_modules
 examples/form

@@ -73,6 +73,7 @@
       "jsx-a11y/tabindex-no-positive": 0,
       "react/no-array-index-key": 0,
       "no-shadow": 0,
+      "jsx-a11y/control-has-associated-label": 0,
       "array-callback-return": 0,
       "no-else-return": 0,
       "no-extra-semi": 0,

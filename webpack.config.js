@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve('dist'),
     filename: 'index.js',
-    libraryTarget: 'commonjs2',
+    libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
@@ -14,20 +14,28 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(s[ac]ss||css)$/i,
         use: [
           'style-loader',
           'css-loader',
           'sass-loader'
-        ],
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader'
+          }
+        ]
       }
-    ],
+    ]
   },
   resolve: {
-    extensions: ['.js'],
-  },
+    extensions: [ '.js' ]
+  }
 };

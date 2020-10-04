@@ -24,13 +24,15 @@
     "sass": "^1.26.10",
     "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "eslint-plugin-css-modules": "^2.11.0",
     "generate-license": "^1.0.0",
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "uuid": "^8.3.0"
   },
   "directories": {
     "example": "examples"
@@ -43,5 +45,14 @@
     "url": "https://github.com/FerCorona/crown/issues"
   },
   "homepage": "https://github.com/FerCorona/crown#readme",
-  "description": ""
+  "description": "CROWN",
+  "keywords": [
+    "React",
+    "Front-End",
+    "Components",
+    "Library"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }

@@ -9,8 +9,10 @@ class Button extends Component {
   }
 
   render() {
-    const { text, onClick, color, textColor, borderColor, type, shape } = this.props;
-    const style = {};
+    const { text, onClick, color, textColor, borderColor, type, shape, shadow } = this.props;
+    const style = {
+      boxShadow: shadow && '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+    };
     switch (type) {
       case 'Secondary':
         style.border = ` 2px solid var(${borderColor})`;
@@ -45,7 +47,8 @@ Button.defaultProps = {
   textColor: '--white',
   borderColor: '--blue-4',
   type: 'Default',
-  shape: 'Round'
+  shape: 'Round',
+  shadow: true
 };
 
 export default Button;
