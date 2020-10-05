@@ -5,6 +5,7 @@ import Switch from './Switch';
 import CheckBox from './CheckBox';
 import Image from './Image';
 import DropDown from './DropDown';
+import RadioButton from './RadioButton';
 
 require('./Styles/colors.scss');
 
@@ -15,5 +16,6 @@ export {
   Switch,
   CheckBox,
   Image,
-  DropDown
+  DropDown,
+  RadioButton
 };

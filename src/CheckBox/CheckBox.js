@@ -21,8 +21,10 @@ class Switch extends Component {
   }
 
   render() {
+    const id = uuidv4();
     return (
-      <label className='container'>
+      <div className='CROWNCheckBox Active'>
+        <input id={id} type='checkbox' className='Active' />
         {
           this.props.text && (
             <div className='Label'>
@@ -30,9 +32,7 @@ class Switch extends Component {
             </div>
           )
         }
-        <input type='checkbox' />
-        <span className='checkmark' />
-      </label>
+      </div>
     );
   }
 }
