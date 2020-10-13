@@ -12,7 +12,7 @@ const RadioButton = ({ options }) => (
           <input type='radio' name='options' checked />
           <span className='Radio' />
           <div className='Label'>
-            <Label size='small' text={option} color='--gray-blue-4' weight='ligth_x' />
+            <Label size='small' text={option} color='--black' weight='ligth_x' />
           </div>
         </label>
       ))

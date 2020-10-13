@@ -8,7 +8,7 @@ const InputText = ({ placeholder, value, onChange, namestate, type, title, list,
   if (title) {
     input = (
       <>
-        <Label size='small' text={placeholder} color='--gray-blue-4' weight='ligth_x' />
+        <Label size='small' text={placeholder} color='--black' weight='ligth_x' />
         <input className='CROWNInputText' type={type} value={value} onChange={onChange} name={namestate} />
       </>
     );
