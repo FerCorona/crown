@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Label from '../Label';
 
-require('./styles.scss');
-
 class Switch extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +22,7 @@ class Switch extends Component {
     const id = uuidv4();
     return (
       <div className='CROWNCheckBox Active'>
-        <input id={id} type='checkbox' className='Active' />
+        <input id={id} type='checkbox' className='Active' onChange={this.updateCheck} checked={this.state.isChecked} />
         {
           this.props.text && (
             <div className='Label'>
@@ -38,7 +36,7 @@ class Switch extends Component {
 }
 
 Switch.defaultProps = {
-  defaultChecked: true,
+  defaultChecked: false,
   checkUpdated: isChecked => console.log(isChecked),
   color: '--yellow-4',
   text: null

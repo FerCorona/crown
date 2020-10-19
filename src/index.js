@@ -9,6 +9,7 @@ import RadioButton from './RadioButton';
 import Table from './Table';
 
 require('./Styles/colors.scss');
+require('./Styles/main.scss');
 
 export {
   Button,

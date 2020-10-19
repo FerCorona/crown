@@ -1,27 +1,59 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Label from '../Label';
 
 require('./styles.scss');
 
-const RadioButton = ({ options }) => (
-  <div className='CROWNRadioButton' role='radiogroup' aria-labelledby='bulgy-radios-label'>
-    {
-      options.map(option => (
-        <label>
-          <input type='radio' name='options' checked />
-          <span className='Radio' />
-          <div className='Label'>
-            <Label size='small' text={option} color='--black' weight='ligth_x' />
-          </div>
-        </label>
-      ))
-    }
-  </div>
-);
+class RadioButton extends Component {
+  constructor() {
+    super();
+    this.state = {
+      selectedOption: ''
+    };
+    this.handleOptionChange = this.handleOptionChange.bind(this);
+  }
+
+  handleOptionChange(changeEvent) {
+    this.setState({
+      selectedOption: changeEvent.target.value
+    }, this.props.radioUpdated(changeEvent.target.value));
+  }
+
+  render() {
+    return (
+      <div className='CROWNRadioButton' role='radiogroup' aria-labelledby='bulgy-radios-label'>
+        {
+          this.props.options.map(option => (
+            <label>
+              <input type='radio' value={option.id} checked={this.state.selectedOption === option.id} onChange={this.handleOptionChange} />
+              <span className='Radio' />
+              <div className='Label'>
+                <Label size='small' text={option.label} color='--black' weight='ligth_x' />
+              </div>
+            </label>
+          ))
+        }
+      </div>
+    );
+  }
+}
 
 RadioButton.defaultProps = {
-  options: [ 'Si', 'No', 'Tal vez' ]
+  options: [
+    {
+      label: 'Si',
+      id: 'si_option'
+    },
+    {
+      label: 'No',
+      id: 'no_option'
+    },
+    {
+      label: 'Tal vez',
+      id: 'tal_vez_option'
+    }
+  ],
+  radioUpdated: isChecked => console.log(isChecked)
 };
 
 export default RadioButton;
