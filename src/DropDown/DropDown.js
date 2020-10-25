@@ -1,34 +1,41 @@
 import React, { Component } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-
-import InputText from '../InputText';
-
-require('./styles.scss');
 
 class DropDown extends Component {
-  constructor() {
+  constructor(props) {
     super();
-    this.state = {};
+    this.state = {
+      optionSelected: props.placeholder
+    };
+    this.setOption = this.setOption.bind(this);
+  }
+
+  setOption(option) {
+    this.setState({
+      optionSelected: option
+    });
   }
 
   render() {
-    const { options } = this.props;
-    const id = uuidv4();
     return (
-      <>
-        <InputText list={id} id={`${id}-id`} />
-        <datalist name={`List-${id}`} id={id} onInput={this.onChangeOption}>
+      <div className='CROWNDropDown'>
+        <div className='Options'>
+          {this.state.optionSelected}
+        </div>
+        <div className='ListContent'>
           {
-            options.map(value => <option value={value} key={value} />)
+            this.props.options.map((option, index) => (
+              <div className='Option' key={`option-${index}`} onClick={() => this.setOption(option)}> {option} </div>
+            ))
           }
-        </datalist>
-      </>
+        </div>
+      </div>
     );
   }
 }
 
 DropDown.defaultProps = {
-  options: [ 'Button', 'Common', 'DropDpown', 'Image', 'InputText', 'Label', 'RadioButton', 'Switch' ]
+  options: [ 'Button', 'Common', 'DropDown', 'Image', 'InputText', 'Label', 'RadioButton', 'Switch' ],
+  placeholder: 'Selecciona una opcion'
 };
 
 export default DropDown;

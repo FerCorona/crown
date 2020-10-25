@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-require('./styles.scss');
-
 class Table extends Component {
   constructor() {
     super();

@@ -1,19 +1,17 @@
 import React from 'react';
 import Label from '../Label';
 
-require('./styles.scss');
-
-const InputText = ({ placeholder, value, onChange, namestate, type, title, list, id }) => {
+const InputText = ({ placeholder, value, onChange, namestate, type, title, id, extraStyle }) => {
   let input = null;
   if (title) {
     input = (
       <>
-        <Label size='small' text={placeholder} color='--black' weight='ligth_x' />
-        <input className='CROWNInputText' type={type} value={value} onChange={onChange} name={namestate} />
+        <Label size='small' text={placeholder} color='--black-0' weight='ligth_x' />
+        <input className={`CROWNInputText ${extraStyle}`} type={type} value={value} onChange={onChange} name={namestate} />
       </>
     );
   } else {
-    input = <input className='CROWNInputText' type={type} value={value} onChange={onChange} placeholder={placeholder} name={namestate} list={list} id={id} />;
+    input = <input className={`CROWNInputText ${extraStyle}`} type={type} value={value} onChange={onChange} placeholder={placeholder} name={namestate} id={id} />;
   }
   return input;
 };
@@ -24,8 +22,8 @@ InputText.defaultProps = {
   namestate: 'input',
   type: 'text',
   title: false,
-  list: null,
-  id: null
+  id: null,
+  extraStyle: ''
 };
 
 export default InputText;

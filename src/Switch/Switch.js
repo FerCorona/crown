@@ -3,8 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 
 import Label from '../Label';
 
-require('./styles.scss');
-
 class Switch extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +28,7 @@ class Switch extends Component {
         {
           this.props.text && (
             <div className='Label'>
-              <Label size='small' text={this.props.text} color='--black' weight='ligth_x' />
+              <Label size='small' text={this.props.text} color='--black-0' weight='ligth_x' />
             </div>
           )
         }

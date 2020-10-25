@@ -26,7 +26,7 @@ class Switch extends Component {
         {
           this.props.text && (
             <div className='Label'>
-              <Label size='small' text={this.props.text} color='--black' weight='ligth_x' />
+              <Label size='small' text={this.props.text} color='--black-0' weight='ligth_x' />
             </div>
           )
         }

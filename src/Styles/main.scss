@@ -1,5 +1,10 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  background-color: #f5f5f7;
+}
+
 .CROWNButton {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     text-align: center;
     display: inline-block;
     font-size: 13px;
@@ -33,11 +38,6 @@
           --active: #ff5722;
         }
         --active-inner: #fff;
-        --border: #BBC1E1;
-        --border-hover: #607d8b;
-        --background: #fff;
-        --disabled: #F6F8FF;
-        --disabled-inner: #E1E6F9;
         -webkit-appearance: none;
         -moz-appearance: none;
         height: 21px;
@@ -47,8 +47,8 @@
         position: relative;
         margin: 0;
         cursor: pointer;
-        border: 1px solid var(--bc, var(--border));
-        background: var(--b, var(--background));
+        border: 1px solid var(--gray-0);
+        background: var(--b,  var(--gray-blue-2));
         transition: background .3s, border-color .3s, box-shadow .2s;
         &:after {
           content: '';
@@ -59,30 +59,11 @@
           transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
         }
         &:checked {
-          --b: var(--active);
-          --bc: var(--active);
+          --b: var(--blue-0);
+          --bc: var(--blue-0);
           --d-o: .3s;
           --d-t: .6s;
           --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
-        }
-        &:disabled {
-          --b: var(--disabled);
-          cursor: not-allowed;
-          opacity: .9;
-          &:checked {
-            --b: var(--disabled-inner);
-            --bc: var(--border);
-          }
-        }
-        &:hover {
-          &:not(:checked) {
-            &:not(:disabled) {
-              --bc: var(--border-hover);
-            }
-          }
-        }
-        &:focus {
-          box-shadow: 0 0 0 var(--focus);
         }
         &:not(.switch) {
           width: 21px;
@@ -149,14 +130,14 @@
         &:checked {
           --s: .5;
         }
-      }
-    }
+      }   
   }
+}
 
   input.CROWNInputText {
     width: 100%;
-    border: 2px solid var(--gray);
-    border-radius: 4px;
+    border: 2px solid var(--gray-0);
+    border-radius: 8px;
     margin-top: 5px;
     margin-right: 0px;
     margin-bottom: 10px;
@@ -167,38 +148,37 @@
     transition: 0.3s;
   }
   input.CROWNInputText:focus {
-    border-color: var(--gray);
-    box-shadow: 0 0 8px 0 #d3d3d3;
+    border-color: var(--gray-0);
+    box-shadow: 0 0 3px 3px var(--gray-blue-1);
   }
 
-  .CROWNLabel {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    margin-top: 10px;
-    margin-right: 0px;
-    margin-bottom: 5px;
-    margin-left: 0px;
+.CROWNLabel {
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-left: 0px;
 }
 
 
 .CROWNRadioButton {
-    margin-left: 5px;
-    .Label {
-      margin-left: 10px;
+  margin-left: 5px;
+  .Label {
+    margin-left: 10px;
+  }
+  label {
+    display: block;
+    position: relative;
+    height: 0.5em;
+    padding-left: 1rem;
+    cursor: pointer;
+    font-size: 2.5rem;
+    user-select: none;
+    color: var(--black-0);
+    letter-spacing: 1px;
+    &:hover input:not(:checked) ~ .Radio {
+      opacity: 0.8;
     }
-    label {
-      display: block;
-      position: relative;
-      height: 0.5em;
-      padding-left: 1rem;
-      cursor: pointer;
-      font-size: 2.5rem;
-      user-select: none;
-      color: #555;
-      letter-spacing: 1px;
-      &:hover input:not(:checked) ~ .Radio {
-        opacity: 0.8;
-      }
-    }
+  }  
     input {
       position: absolute;
       cursor: pointer;
@@ -207,7 +187,7 @@
       left: -2000px;
       &:checked {
         ~ .Radio {
-          background-color: #00bcd4;
+          background-color: var(--blue-0);
           transition: background .3s;
           &::after {
             opacity: 1;
@@ -221,7 +201,7 @@
       left: 0;
       height: 1rem;
       width: 1rem;
-      background: #c9ded6;
+      background: var(--gray-blue-2);
       border-radius: 50%;
       &::after {
         content: '';
@@ -232,7 +212,7 @@
         width: .5rem;
         height: .5rem;
         border-radius: 50%;
-        background: #fff;
+        background: var(--white);
       }
     }
   }
@@ -249,7 +229,7 @@
       display: inline-block;
       width: 40px;
       height: 20px;
-      background-color: rgba(0, 0, 0, 0.25);
+      background-color: var(--gray-blue-2);
       border-radius: 20px;
       transition: all 0.3s;
     }
@@ -259,7 +239,7 @@
       width: 18px;
       height: 18px;
       border-radius:50%;
-      background-color: white;
+      background-color: var(--white);
       top: 1px;
       left: 1px;
       transition: all 0.3s;
@@ -269,17 +249,15 @@
     }
     .checkbox:checked + .switch {
       &.colorSwitch{
-        background-color:#2f9688;
+        background-color: var(--blue-0);
       }
     }
-  
     .checkbox {
       display : none;
     }
   }
 
   .CROWNTable {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     border-collapse: collapse;
     box-shadow: 0 0 8px 0 #d3d3d3;
     border-radius: 10px;
@@ -290,7 +268,7 @@
   
     .Header {
       color: var(--white);
-      background-color: var(--orange-4);
+      background-color: var(--blue-0);
       height: 50px;
     }
     .Body {
@@ -298,5 +276,46 @@
       color: var(--gray);
       height: 40px;
     }
+  }
+
+  .CROWNDropDown {
+    position: relative;
+    display: inline-block;
+    border-radius: 8px;
+    width: 100%;
+    .ListContent {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      padding: 12px 16px;
+      z-index: 1;
+      .Option {
+        color: var(--gray);
+        padding: 5px;
+      }
+      .Option:hover {
+        background-color: var(--gray-blue-2);
+        cursor: pointer;
+      }
+    }
+    .NoMarginBottom {
+      margin-bottom: 0px;
+    }
+    .Options {
+      color: var(--black-0);
+      background-color: #f9f9f9;
+      margin-bottom: 10px;
+      padding: 10px 10px;
+      box-shadow: 0 0 8px 0 #d3d3d3;
+      margin-top: 10px;
+    }
+  }
+  
+  .CROWNDropDown:hover .ListContent {
+    display: block;
+    width: -webkit-fill-available;
   }
   

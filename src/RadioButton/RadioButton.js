@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import Label from '../Label';
 
-require('./styles.scss');
-
 class RadioButton extends Component {
   constructor() {
     super();
@@ -28,7 +26,7 @@ class RadioButton extends Component {
               <input type='radio' value={option.id} checked={this.state.selectedOption === option.id} onChange={this.handleOptionChange} />
               <span className='Radio' />
               <div className='Label'>
-                <Label size='small' text={option.label} color='--black' weight='ligth_x' />
+                <Label size='small' text={option.label} color='--black-0' weight='ligth_x' />
               </div>
             </label>
           ))

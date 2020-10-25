@@ -1,8 +1,6 @@
 import React from 'react';
 import CONSTANTS from '../Common/Constants';
 
-require('./styles.scss');
-
 const Label = ({ text, color, size, weight }) => {
   const style = {
     color: `var(${color})`,
@@ -20,8 +18,8 @@ const Label = ({ text, color, size, weight }) => {
 
 Label.defaultProps = {
   text: 'I\'m a label',
-  size: 'medium',
-  color: '--pink-4',
+  size: 'big',
+  color: '--black-0',
   weight: 'regular'
 };
 
