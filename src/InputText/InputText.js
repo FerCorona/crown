@@ -1,17 +1,38 @@
 import React from 'react';
 import Label from '../Label';
 
-const InputText = ({ placeholder, value, onChange, namestate, type, title, id, extraStyle }) => {
+const InputText = ({ placeholder, value, onChange, namestate, type, title, extraStyle, stateName }) => {
   let input = null;
   if (title) {
     input = (
       <>
         <Label size='small' text={placeholder} color='--black-0' weight='ligth_x' />
-        <input className={`CROWNInputText ${extraStyle}`} type={type} value={value} onChange={onChange} name={namestate} />
+        <input
+          className={`CROWNInputText ${extraStyle}`}
+          type={type}
+          value={value}
+          onChange={e => onChange({
+            stateName,
+            value: e.target.value
+          })}
+          name={namestate}
+        />
       </>
     );
   } else {
-    input = <input className={`CROWNInputText ${extraStyle}`} type={type} value={value} onChange={onChange} placeholder={placeholder} name={namestate} id={id} />;
+    input = (
+      <input
+        placeholder={placeholder}
+        className={`CROWNInputText ${extraStyle}`}
+        type={type}
+        value={value}
+        onChange={e => onChange({
+          stateName,
+          value: e.target.value
+        })}
+        name={namestate}
+      />
+    );
   }
   return input;
 };

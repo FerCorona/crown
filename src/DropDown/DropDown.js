@@ -1,41 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class DropDown extends Component {
-  constructor(props) {
-    super();
-    this.state = {
-      optionSelected: props.placeholder
-    };
-    this.setOption = this.setOption.bind(this);
-  }
-
-  setOption(option) {
-    this.setState({
-      optionSelected: option
-    });
-  }
-
-  render() {
-    return (
-      <div className='CROWNDropDown'>
-        <div className='Options'>
-          {this.state.optionSelected}
-        </div>
-        <div className='ListContent'>
-          {
-            this.props.options.map((option, index) => (
-              <div className='Option' key={`option-${index}`} onClick={() => this.setOption(option)}> {option} </div>
-            ))
-          }
-        </div>
-      </div>
-    );
-  }
-}
+const DropDown = ({ optionSelected, options, onChange, stateName }) => (
+  <div className='CROWNDropDown'>
+    <div className='Options'>
+      {optionSelected}
+    </div>
+    <div className='ListContent'>
+      {
+        options.map((option, index) => (
+          <div
+            className='Option'
+            key={`option-${index}`}
+            onClick={() => onChange({
+              stateName,
+              value: option
+            })}
+          >
+            {option}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+);
 
 DropDown.defaultProps = {
-  options: [ 'Button', 'Common', 'DropDown', 'Image', 'InputText', 'Label', 'RadioButton', 'Switch' ],
-  placeholder: 'Selecciona una opcion'
+  options: ['Button', 'Common', 'DropDown', 'Image', 'InputText', 'Label', 'RadioButton', 'Switch'],
+  placeholder: 'Selecciona una opcion',
+  onChange: () => {}
 };
 
 export default DropDown;

@@ -18,7 +18,7 @@ const Label = ({ text, color, size, weight }) => {
 
 Label.defaultProps = {
   text: 'I\'m a label',
-  size: 'big',
+  size: 'small',
   color: '--black-0',
   weight: 'regular'
 };

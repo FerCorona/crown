@@ -1,45 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import Label from '../Label';
 
-class Switch extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isChecked: this.props.defaultChecked
-    };
-    this.updateCheck = this.updateCheck.bind(this);
-  }
-
-  updateCheck() {
-    const check = !this.state.isChecked;
-    this.setState({
-      isChecked: check
-    }, this.props.checkUpdated(check));
-  }
-
-  render() {
-    const id = uuidv4();
-    return (
-      <div className='CROWNSwitch'>
-        <input type='checkbox' id={id} className='checkbox colorSwitch' defaultChecked={this.state.isChecked} onChange={this.updateCheck} />
-        <label htmlFor={id} className='switch colorSwitch' />
-        {
-          this.props.text && (
-            <div className='Label'>
-              <Label size='small' text={this.props.text} color='--black-0' weight='ligth_x' />
-            </div>
-          )
-        }
-      </div>
-    );
-  }
-}
+const Switch = ({ isChecked, onChange, text, stateName }) => {
+  const id = uuidv4();
+  return (
+    <div className='CROWNSwitch'>
+      <input
+        type='checkbox'
+        id={id}
+        className='checkbox colorSwitch'
+        defaultChecked={isChecked}
+        onChange={() => onChange({
+          stateName,
+          value: !isChecked
+        })}
+      />
+      <label htmlFor={id} className='switch colorSwitch' />
+      {
+        text && (
+          <div className='Label'>
+            <Label size='small' text={text} color='--black-0' weight='ligth_x' />
+          </div>
+        )
+      }
+    </div>
+  );
+};
 
 Switch.defaultProps = {
-  defaultChecked: true,
-  checkUpdated: isChecked => console.log(isChecked),
+  onChange: () => {},
   color: '--yellow-4',
   text: null
 };

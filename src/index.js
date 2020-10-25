@@ -8,8 +8,8 @@ import DropDown from './DropDown';
 import RadioButton from './RadioButton';
 import Table from './Table';
 
-require('./Styles/colors.scss');
-require('./Styles/main.scss');
+require('./Common/Styles/colors.scss');
+require('./Common/Styles/main.scss');
 
 export {
   Button,

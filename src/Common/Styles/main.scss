@@ -1,13 +1,12 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 14px;
   background-color: #f5f5f7;
 }
 
 .CROWNButton {
+    font-size: 14px;
     text-align: center;
     display: inline-block;
-    font-size: 13px;
     font-weight: 600;
     width: -webkit-fill-available;
     margin-top: 5px;
@@ -29,6 +28,7 @@ body {
     margin-top: 5px;
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
     .Label {
       margin-left: 10px;
     }
@@ -136,6 +136,7 @@ body {
 
   input.CROWNInputText {
     width: 100%;
+    font-size: 14px;
     border: 2px solid var(--gray-0);
     border-radius: 8px;
     margin-top: 5px;
@@ -162,22 +163,20 @@ body {
 
 .CROWNRadioButton {
   margin-left: 5px;
+  margin-bottom: 15px;
   .Label {
     margin-left: 10px;
   }
   label {
     display: block;
     position: relative;
-    height: 0.5em;
-    padding-left: 1rem;
+    height: 15px;
+    margin-bottom: 20px;
+    padding-left: 15px;
     cursor: pointer;
-    font-size: 2.5rem;
+    font-size: 14px;
     user-select: none;
     color: var(--black-0);
-    letter-spacing: 1px;
-    &:hover input:not(:checked) ~ .Radio {
-      opacity: 0.8;
-    }
   }  
     input {
       position: absolute;
@@ -221,6 +220,8 @@ body {
     margin-top: 5px;
     display: flex;
     align-items: center;
+    height: 30px;
+    margin-bottom: 5px;
     .Label {
       margin-left: 10px;
     }
@@ -283,6 +284,7 @@ body {
     display: inline-block;
     border-radius: 8px;
     width: 100%;
+    font-size: 14px;
     .ListContent {
       display: none;
       position: absolute;

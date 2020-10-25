@@ -1,5 +1,6 @@
 const LABEL_SIZE = {
-  small: '12px',
+  thin: '12px',
+  small: '14px',
   medium: '16px',
   big: '20px'
 };
