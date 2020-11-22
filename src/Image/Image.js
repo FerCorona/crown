@@ -1,5 +1,5 @@
 import React from 'react';
-import CONSTANTS from '../Common/Constants';
+import { IMAGE_SIZE } from '../Common/Constants';
 
 import image from '../Common/Assets/crown.png';
 
@@ -7,8 +7,8 @@ require('./styles.scss');
 
 const Image = ({ src, size, shadow }) => {
   const style = {
-    width: `${CONSTANTS.IMAGE_SIZE[size]}`,
-    height: `${CONSTANTS.IMAGE_SIZE[size]}`
+    width: `${IMAGE_SIZE[size]}`,
+    height: `${IMAGE_SIZE[size]}`
   };
   if (shadow) {
     style.boxShadow = '0 4px 8px 0 rgba(0,0,0,0.2)';

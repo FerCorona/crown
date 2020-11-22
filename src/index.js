@@ -7,6 +7,14 @@ import Image from './Image';
 import DropDown from './DropDown';
 import RadioButton from './RadioButton';
 import Table from './Table';
+import { LABEL_SIZE, LABEL_WEIGHT, IMAGE_SIZE, COLOR } from './Common/Constants';
+
+const Constants = {
+  LABEL_SIZE,
+  LABEL_WEIGHT,
+  IMAGE_SIZE,
+  COLOR
+};
 
 require('./Common/Styles/colors.scss');
 require('./Common/Styles/main.scss');
@@ -20,6 +28,6 @@ export {
   Image,
   DropDown,
   RadioButton,
-  Table
-
+  Table,
+  Constants
 };

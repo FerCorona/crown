@@ -1,11 +1,11 @@
 import React from 'react';
-import CONSTANTS from '../Common/Constants';
+import { LABEL_SIZE,LABEL_WEIGHT } from '../Common/Constants';
 
 const Label = ({ text, color, size, weight }) => {
   const style = {
     color: `var(${color})`,
-    fontSize: `${CONSTANTS.LABEL_SIZE[size]}`,
-    fontWeight: `${CONSTANTS.LABEL_WEIGHT[weight]}`
+    fontSize: `${LABEL_SIZE[size]}`,
+    fontWeight: `${LABEL_WEIGHT[weight]}`
   };
   return (
     <div
