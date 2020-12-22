@@ -43,7 +43,6 @@ InputText.defaultProps = {
   namestate: 'input',
   type: 'text',
   title: false,
-  id: null,
   extraStyle: ''
 };
 
