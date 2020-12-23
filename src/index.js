@@ -7,6 +7,7 @@ import Image from './Image';
 import DropDown from './DropDown';
 import RadioButton from './RadioButton';
 import Table from './Table';
+import Loader from './Loader';
 import { LABEL_SIZE, LABEL_WEIGHT, IMAGE_SIZE, COLOR } from './Common/Constants';
 
 const Constants = {
@@ -29,5 +30,6 @@ export {
   DropDown,
   RadioButton,
   Table,
+  Loader,
   Constants
 };
