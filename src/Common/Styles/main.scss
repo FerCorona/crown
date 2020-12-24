@@ -1,3 +1,10 @@
+
+html, body{
+    margin:0 auto;
+    padding:0;
+    border:0;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #f5f5f7;
@@ -18,6 +25,9 @@ body {
     }
     &.SemiRound{
       border-radius: 10px;
+    }
+    &.Square{
+      border-radius: 0px;
     }
 }
 .CROWNButton:hover{
@@ -398,5 +408,109 @@ body {
     }
     100% {
       opacity: 0;
+    }
+  }
+
+  .CROWNModal {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    transition: all .3s;
+    background-color: rgba(255,255, 255, .15);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .ContainerModal {
+      height: 40%;
+      width: 40%;
+      background-color: #f5f5f7;
+      border-radius: 8px;
+      box-shadow:
+      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+      0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+      .Modal {
+        padding: 15px;
+        height: -webkit-fill-available;
+        .Close {
+          cursor: pointer;
+          display: flex;
+          justify-content: flex-end;
+          color: var(--gray-blue-3);
+          height: 5%;
+          &:hover {
+            color: var(--black-3);
+          }
+        }
+        .Content {
+          height: -webkit-fill-available;
+          margin: 15px;
+          .Title {
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+          }
+          .Text {
+            margin: 15px;
+            height: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+          }
+          .ButtonArea {
+            display: flex;
+          }
+          .ButtonArea > a{
+            margin-left: 10px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .CROWNNavBar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow:
+      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+      0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+      0 100px 80px rgba(0, 0, 0, 0.12);
+    .Item {
+      cursor: pointer;
+      margin-left: 10px;
+      margin-right: 10px;
+      width: 80px;
+      justify-content: center;
+      display: flex;
+      &.Active {
+        border-bottom: 2px solid black;
+        border-image-slice: 1;
+        font-weight: 700;
+        &.Purple {
+          border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+        }
+        &.Green {
+          border-image-source: linear-gradient(to left, #00C853, #B2FF59);
+        }
+        &.Colorful {
+          border-image-source: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+        }
+      }
+      &:hover {
+        font-weight: 700;
+      }
     }
   }
