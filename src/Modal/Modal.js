@@ -15,7 +15,7 @@ const Modal = ({ show, onClose, onActionAcepted, onActionRejected, child }) => (
                   <div className='Title'>Title</div>
                   <div className='Text'>Content of Modal</div>
                   <div className='ButtonArea'>
-                    <Button shape='Square' color='--red-1' text='Calcelar' onClick={() => onActionAcepted()} />
+                    <Button shape='Square' color='--red-1' text='Calcelar' type='Secondary' borderColor='--red-1' textColor='--red-1' onClick={() => onActionAcepted()} />
                     <Button shape='Square' color='--teal-1' text='Aceptar' onClick={() => onActionRejected()} />
                   </div>
                 </div>

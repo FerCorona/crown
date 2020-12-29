@@ -1,24 +1,38 @@
 import React from 'react';
-import { IMAGE_SIZE } from '../Common/Constants';
 
-import image from '../Common/Assets/crown.png';
+import image from '../Common/Assets/crown.jpg';
 
-require('./styles.scss');
-
-const Image = ({ src, size, shadow }) => {
-  const style = {
-    width: `${IMAGE_SIZE[size]}`,
-    height: `${IMAGE_SIZE[size]}`
-  };
-  if (shadow) {
-    style.boxShadow = '0 4px 8px 0 rgba(0,0,0,0.2)';
-  }
-  return (
-    <div className='CROWNImage' style={style}>
-      <img src={src} style={style} />
+const Image = ({ src }) => (
+  <div className='CROWNImage'>
+    <div
+      className='ImageBlur'
+      style={
+        {
+          backgroundImage: `url(${src})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          position: 'relative'
+        }
+      }
+    >
+      <div className='Blur'>
+        <div
+          className='Image'
+          style={
+            {
+              backgroundImage: `url(${src})`,
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              position: 'relative'
+            }
+          }
+        />
+      </div>
     </div>
-  );
-};
+  </div>
+);
 
 Image.defaultProps = {
   src: image,
