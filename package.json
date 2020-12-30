@@ -1,12 +1,15 @@
 {
-  "name": "crown",
+  "name": "crown_p",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
     "build": "webpack --mode production",
     "watch": "webpack --mode production --watch"
   },
-  "author": "Fernando Garcia Corona",
+  "author": {
+    "name": "Fernando Garcia Corona",
+    "email" : "coronitafeer@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.11.4",
@@ -52,6 +55,6 @@
     "Library"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/OWNER"
   }
 }
