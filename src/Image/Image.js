@@ -1,43 +1,57 @@
 import React from 'react';
 
-import image from '../Common/Assets/crown.jpg';
-
-const Image = ({ src }) => (
-  <div className='CROWNImage'>
+const Image = ({ src, frame, shadow, size }) => {
+  const backgroundImage = src ? `url(${src})` : 'linear-gradient(45deg, var(--red-1), var(--pink-1))';
+  const onlyImage = (
     <div
-      className='ImageBlur'
+      className='Image'
       style={
         {
-          backgroundImage: `url(${src})`,
+          backgroundImage,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           position: 'relative'
         }
       }
-    >
-      <div className='Blur'>
-        <div
-          className='Image'
-          style={
-            {
-              backgroundImage: `url(${src})`,
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              position: 'relative'
-            }
+    />
+  );
+  if (!frame) {
+    return (
+      <div className={`CROWNImage ${shadow ? 'Shadow' : ''}`} style={size}>
+        {onlyImage}
+      </div>
+    );
+  }
+  return (
+    <div className={`CROWNImage ${shadow ? 'Shadow' : ''}`} style={size}>
+      <div
+        className='ImageBlur'
+        style={
+          {
+            backgroundImage,
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            position: 'relative'
           }
-        />
+        }
+      >
+        <div className='Blur'>
+          {onlyImage}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 Image.defaultProps = {
-  src: image,
-  size: 'medium',
-  shadow: true
+  shadow: true,
+  frame: true,
+  size: {
+    width: '300px',
+    height: '350px'
+  }
 };
 
 export default Image;
