@@ -31,7 +31,6 @@ const Switch = ({ isChecked, onChange, text, stateName }) => {
 
 Switch.defaultProps = {
   onChange: () => {},
-  color: '--yellow-4',
   text: null
 };
 

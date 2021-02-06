@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import Label from '../Label';
 
-const Switch = ({ text, onChange, isChecked, stateName }) => (
+const CheckBox = ({ text, onChange, isChecked, stateName }) => (
   <div className='CROWNCheckBox Active'>
     <input
       id={uuidv4()}
@@ -26,11 +26,10 @@ const Switch = ({ text, onChange, isChecked, stateName }) => (
   </div>
 );
 
-Switch.defaultProps = {
+CheckBox.defaultProps = {
   text: null,
   isChecked: false,
-  onChange: () => { },
-  color: '--yellow-4'
+  onChange: () => { }
 };
 
-export default Switch;
+export default CheckBox;

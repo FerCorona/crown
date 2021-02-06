@@ -1,34 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Table extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <table className='CROWNTable'>
-        <thead>
-          <tr className='Header'>
-            {this.props.header.map(head => (
-              <th>{head}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {this.props.body.map(row => (
-            <tr className='Body'>
-              {row.map(cell => (
-                <td>{cell}</td>
-              ))}
-            </tr>
+const Table = ({ header, body }) => (
+  <table className='CROWNTable'>
+    <thead>
+      <tr className='Header'>
+        {header.map(head => (
+          <th>{head}</th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {body.map(row => (
+        <tr className='Body'>
+          {row.map(cell => (
+            <td>{cell}</td>
           ))}
-        </tbody>
-      </table>
-    );
-  }
-}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
 
 Table.defaultProps = {
   header: ['NOMBRE', 'APELLIDO', 'CARRERA', 'PROMEDIO'],

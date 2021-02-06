@@ -48,7 +48,6 @@ class DropDown extends Component {
 
 DropDown.defaultProps = {
   options: [ 'Button', 'Common', 'DropDown', 'Image', 'InputText', 'Label', 'RadioButton', 'Switch' ],
-  placeholder: 'Selecciona una opcion',
   onChange: () => { }
 };
 

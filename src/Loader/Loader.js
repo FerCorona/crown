@@ -9,7 +9,6 @@ const Loader = ({ show }) => (
 );
 
 Loader.defaultProps = {
-  color: '--indigo-4',
   show: false
 };
 

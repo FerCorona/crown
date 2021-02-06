@@ -2,7 +2,7 @@ import React from 'react';
 
 import Label from '../Label';
 
-const RadioButton = ({ options, selectedOption, onChange, stateName }) => (
+const RadioButton = ({ options, optionSelected, onChange, stateName }) => (
   <div className='CROWNRadioButton' role='radiogroup' aria-labelledby='bulgy-radios-label'>
     {
       options.map(option => (
@@ -10,7 +10,7 @@ const RadioButton = ({ options, selectedOption, onChange, stateName }) => (
           <input
             type='radio'
             value={option.id}
-            checked={selectedOption === option.id}
+            checked={optionSelected === option.id}
             onChange={() => onChange({
               stateName,
               value: option.id
