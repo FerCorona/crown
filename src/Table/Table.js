@@ -2,7 +2,8 @@ import React from 'react';
 
 const Table = ({
   header,
-  body
+  body,
+  extraStyle
 }) => (
   <table className={`CROWNTable ${extraStyle}`}>
     <thead>
@@ -56,7 +57,7 @@ Table.defaultProps = {
     ['Fernando', 'Garcia', 'Sistemas', '100'],
     ['Fernando', 'Garcia', 'Sistemas', '100']
   ],
-  extraStyle: '${extraStyle}'
+  extraStyle: ''
 };
 
 export default Table;
