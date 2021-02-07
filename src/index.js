@@ -11,14 +11,6 @@ import InputText from './InputText';
 import Label from './Label';
 import Image from './Image';
 
-import { LABEL_SIZE, LABEL_WEIGHT, IMAGE_SIZE } from './Common/Constants';
-
-const Constants = {
-  LABEL_SIZE,
-  LABEL_WEIGHT,
-  IMAGE_SIZE
-};
-
 require('./Common/Styles/colors.scss');
 require('./Common/Styles/main.scss');
 
@@ -34,6 +26,5 @@ export {
   Button,
   InputText,
   Label,
-  Image,
-  Constants
+  Image
 };

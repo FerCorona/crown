@@ -2,8 +2,15 @@ import React from 'react';
 
 import Button from './../Button';
 
-const Card = ({ src, title, content, buttonConfig, customButton }) => (
-  <div className='CROWNCard'>
+const Card = ({
+  src,
+  title,
+  content,
+  buttonConfig,
+  customButton,
+  extraStyle
+}) => (
+  <div className={`CROWNCard ${extraStyle}`}>
     <div
       className='Card'
       style={
@@ -18,7 +25,7 @@ const Card = ({ src, title, content, buttonConfig, customButton }) => (
       <div className='Content'>
         <div className='Title'>{title}</div>
         <div className='ContentCard'>{content}</div>
-        <div className='Others'>{customButton ? customButton : <Button {...buttonConfig} />}</div>
+        <div className='Others'>{customButton || <Button {...buttonConfig} />}</div>
       </div>
     </div>
   </div>
@@ -34,7 +41,8 @@ Card.defaultProps = {
     text: 'Aceptar',
     onClick: () => { }
   },
-  customButton: false
+  customButton: false,
+  extraStyle: ''
 };
 
 export default Card;

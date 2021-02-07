@@ -1,7 +1,10 @@
 import React from 'react';
 
-const Table = ({ header, body }) => (
-  <table className='CROWNTable'>
+const Table = ({
+  header,
+  body
+}) => (
+  <table className={`CROWNTable ${extraStyle}`}>
     <thead>
       <tr className='Header'>
         {header.map(head => (
@@ -52,8 +55,8 @@ Table.defaultProps = {
     ['Fernando', 'Garcia', 'Sistemas', '100'],
     ['Fernando', 'Garcia', 'Sistemas', '100'],
     ['Fernando', 'Garcia', 'Sistemas', '100']
-  ]
-
+  ],
+  extraStyle: '${extraStyle}'
 };
 
 export default Table;

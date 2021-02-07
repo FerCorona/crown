@@ -2,8 +2,14 @@ import React from 'react';
 
 import Label from '../Label';
 
-const RadioButton = ({ options, optionSelected, onChange, stateName }) => (
-  <div className='CROWNRadioButton' role='radiogroup' aria-labelledby='bulgy-radios-label'>
+const RadioButton = ({
+  options,
+  optionSelected,
+  onChange,
+  stateName,
+  extraStyle
+}) => (
+  <div className={`CROWNRadioButton ${extraStyle}`} role='radiogroup' aria-labelledby='bulgy-radios-label'>
     {
       options.map(option => (
         <label>
@@ -18,7 +24,7 @@ const RadioButton = ({ options, optionSelected, onChange, stateName }) => (
           />
           <span className='Radio' />
           <div className='Label'>
-            <Label size='small' text={option.label} color='--black-0' weight='ligth_x' />
+            <Label size='small' text={option.label} color='--black-1' />
           </div>
         </label>
       ))
@@ -41,7 +47,8 @@ RadioButton.defaultProps = {
       id: 'tal_vez_option'
     }
   ],
-  onChange: isChecked => console.log(isChecked)
+  onChange: isChecked => console.log(isChecked),
+  extraStyle: ''
 };
 
 export default RadioButton;

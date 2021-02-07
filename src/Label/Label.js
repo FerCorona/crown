@@ -1,15 +1,20 @@
 import React from 'react';
-import { LABEL_SIZE,LABEL_WEIGHT } from '../Common/Constants';
 
-const Label = ({ text, color, size, weight }) => {
+const Label = ({
+  text,
+  color,
+  size,
+  weight,
+  extraStyle
+}) => {
   const style = {
     color: `var(${color})`,
-    fontSize: `${LABEL_SIZE[size]}`,
-    fontWeight: `${LABEL_WEIGHT[weight]}`
+    fontSize: size,
+    fontWeight: weight
   };
   return (
     <div
-      className='CROWNLabel'
+      className={`CROWNLabel ${extraStyle}`}
       style={style}
     >{text}
     </div>
@@ -18,9 +23,10 @@ const Label = ({ text, color, size, weight }) => {
 
 Label.defaultProps = {
   text: 'I\'m a label',
-  size: 'small',
-  color: '--black-0',
-  weight: 'regular'
+  size: '22px',
+  color: '--black-1',
+  weight: '400',
+  extraStyle: ''
 };
 
 export default Label;

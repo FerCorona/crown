@@ -8,7 +8,8 @@ const Button = ({
   borderColor,
   type,
   shape,
-  shadow
+  shadow,
+  extraStyle
 }) => {
   const style = {
     boxShadow: shadow && '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
@@ -30,7 +31,7 @@ const Button = ({
   };
   return (
     <a
-      className={`CROWNButton ${shape}`}
+      className={`CROWNButton ${shape} ${extraStyle}`}
       style={style}
       onClick={onClick}
     >
@@ -47,7 +48,8 @@ Button.defaultProps = {
   borderColor: '--blue-4',
   type: 'Default',
   shape: 'Round',
-  shadow: true
+  shadow: true,
+  extraStyle: ''
 };
 
 export default Button;

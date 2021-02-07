@@ -14,9 +14,9 @@ class DropDown extends Component {
   }
 
   render() {
-    const { optionSelected, options, onChange, stateName } = this.props;
+    const { optionSelected, options, onChange, stateName, extraStyle } = this.props;
     return (
-      <div className='CROWNDropDown'>
+      <div className={`CROWNDropDown ${extraStyle}`}>
         <div className='Options' onClick={() => this._toggleActive()}>
           {optionSelected}
         </div>
@@ -48,7 +48,8 @@ class DropDown extends Component {
 
 DropDown.defaultProps = {
   options: [ 'Button', 'Common', 'DropDown', 'Image', 'InputText', 'Label', 'RadioButton', 'Switch' ],
-  onChange: () => { }
+  onChange: () => { },
+  extraStyle: ''
 };
 
 export default DropDown;

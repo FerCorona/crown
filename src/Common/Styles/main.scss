@@ -69,8 +69,8 @@ body {
           transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
         }
         &:checked {
-          --b: var(--blue-0);
-          --bc: var(--blue-0);
+          --b: var(--blue-1);
+          --bc: var(--blue-1);
           --d-o: .3s;
           --d-t: .6s;
           --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
@@ -147,7 +147,7 @@ body {
   input.CROWNInputText {
     width: 100%;
     font-size: 14px;
-    border: 2px solid var(--gray-0);
+    border: 2px solid #EFEFF0;
     border-radius: 8px;
     margin-top: 5px;
     margin-right: 0px;
@@ -159,8 +159,8 @@ body {
     transition: 0.3s;
   }
   input.CROWNInputText:focus {
-    border-color: var(--gray-0);
-    box-shadow: 0 0 3px 3px var(--gray-blue-1);
+    border-color: #EFEFF0;
+    box-shadow: 0 0 3px 3px #EFEFF0;
   }
 
 .CROWNLabel {
@@ -186,7 +186,7 @@ body {
     cursor: pointer;
     font-size: 14px;
     user-select: none;
-    color: var(--black-0);
+    color: var(--black-1);
   }  
     input {
       position: absolute;
@@ -196,7 +196,7 @@ body {
       left: -2000px;
       &:checked {
         ~ .Radio {
-          background-color: var(--blue-0);
+          background-color: var(--blue-1);
           transition: background .3s;
           &::after {
             opacity: 1;
@@ -260,7 +260,7 @@ body {
     }
     .checkbox:checked + .switch {
       &.colorSwitch{
-        background-color: var(--blue-0);
+        background-color: var(--blue-1);
       }
     }
     .checkbox {
@@ -279,7 +279,7 @@ body {
   
     .Header {
       color: var(--white);
-      background-color: var(--blue-0);
+      background-color: var(--blue-1);
       height: 50px;
     }
     .Body {
@@ -317,7 +317,7 @@ body {
       margin-bottom: 0px;
     }
     .Options {
-      color: var(--black-0);
+      color: var(--black-1);
       background-color: #f9f9f9;
       border-radius: 8px;
       margin-bottom: 10px;

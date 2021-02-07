@@ -3,10 +3,16 @@ import { v4 as uuidv4 } from 'uuid';
 
 import Label from '../Label';
 
-const Switch = ({ isChecked, onChange, text, stateName }) => {
+const Switch = ({
+  isChecked,
+  onChange,
+  text,
+  stateName,
+  extraStyle
+}) => {
   const id = uuidv4();
   return (
-    <div className='CROWNSwitch'>
+    <div className={`CROWNSwitch ${extraStyle}`}>
       <input
         type='checkbox'
         id={id}
@@ -21,7 +27,7 @@ const Switch = ({ isChecked, onChange, text, stateName }) => {
       {
         text && (
           <div className='Label'>
-            <Label size='small' text={text} color='--black-0' weight='ligth_x' />
+            <Label size='small' text={text} color='--black-1' />
           </div>
         )
       }
@@ -31,7 +37,8 @@ const Switch = ({ isChecked, onChange, text, stateName }) => {
 
 Switch.defaultProps = {
   onChange: () => {},
-  text: null
+  text: null,
+  extraStyle: ''
 };
 
 export default Switch;

@@ -1,12 +1,19 @@
 import React from 'react';
 import Label from '../Label';
 
-const InputText = ({ placeholder, value, onChange, namestate, type, title, extraStyle, stateName }) => {
+const InputText = ({
+  placeholder,
+  value,
+  onChange,
+  type,
+  title,
+  extraStyle,
+  stateName }) => {
   let input = null;
   if (title) {
     input = (
       <>
-        <Label size='small' text={placeholder} color='--black-0' weight='ligth_x' />
+        <Label size='small' text={placeholder} color='--black-1' />
         <input
           className={`CROWNInputText ${extraStyle}`}
           type={type}
@@ -15,7 +22,7 @@ const InputText = ({ placeholder, value, onChange, namestate, type, title, extra
             stateName,
             value: e.target.value
           })}
-          name={namestate}
+          name={stateName}
         />
       </>
     );
@@ -30,7 +37,7 @@ const InputText = ({ placeholder, value, onChange, namestate, type, title, extra
           stateName,
           value: e.target.value
         })}
-        name={namestate}
+        name={stateName}
       />
     );
   }

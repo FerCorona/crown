@@ -4,8 +4,14 @@ import { v4 as uuidv4 } from 'uuid';
 
 import Label from '../Label';
 
-const CheckBox = ({ text, onChange, isChecked, stateName }) => (
-  <div className='CROWNCheckBox Active'>
+const CheckBox = ({
+  text,
+  onChange,
+  isChecked,
+  stateName,
+  extraStyle
+}) => (
+  <div className={`CROWNCheckBox ${extraStyle}`}>
     <input
       id={uuidv4()}
       type='checkbox'
@@ -19,7 +25,7 @@ const CheckBox = ({ text, onChange, isChecked, stateName }) => (
     {
       text && (
         <div className='Label'>
-          <Label size='small' text={text} color='--black-0' weight='ligth_x' />
+          <Label size='small' text={text} color='--black-1' />
         </div>
       )
     }
@@ -29,7 +35,8 @@ const CheckBox = ({ text, onChange, isChecked, stateName }) => (
 CheckBox.defaultProps = {
   text: null,
   isChecked: false,
-  onChange: () => { }
+  onChange: () => { },
+  extraStyle: ''
 };
 
 export default CheckBox;

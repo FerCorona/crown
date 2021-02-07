@@ -2,9 +2,18 @@ import React from 'react';
 
 import Button from './../Button';
 
-const Modal = ({ show, onClose, onActionAcepted, onActionRejected, child, title, content }) => (
+const Modal = ({
+  show,
+  onClose,
+  onActionAcepted,
+  onActionRejected,
+  child,
+  title,
+  content,
+  extraStyle
+}) => (
   show && (
-    <div className='CROWNModal'>
+    <div className={`CROWNModal ${extraStyle}`}>
       <div className='ContainerModal'>
         <div className='Modal'>
           {
@@ -35,7 +44,8 @@ Modal.defaultProps = {
   onActionRejected: () => {},
   child: null,
   title: 'Card Title',
-  content: 'Card Content  ---- Card Content ---- Card Content'
+  content: 'Card Content  ---- Card Content ---- Card Content',
+  extraStyle: ''
 };
 
 export default Modal;

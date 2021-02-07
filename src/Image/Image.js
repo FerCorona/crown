@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Image = ({ src, frame, shadow, size }) => {
+const Image = ({
+  src,
+  frame,
+  shadow,
+  size,
+  extraStyle
+}) => {
   const backgroundImage = src ? `url(${src})` : 'linear-gradient(45deg, var(--red-1), var(--pink-1))';
   const onlyImage = (
     <div
@@ -18,13 +24,13 @@ const Image = ({ src, frame, shadow, size }) => {
   );
   if (!frame) {
     return (
-      <div className={`CROWNImage ${shadow ? 'Shadow' : ''}`} style={size}>
+      <div className={`CROWNImage ${shadow ? 'Shadow' : ''} ${extraStyle}`} style={size}>
         {onlyImage}
       </div>
     );
   }
   return (
-    <div className={`CROWNImage ${shadow ? 'Shadow' : ''}`} style={size}>
+    <div className={`CROWNImage ${shadow ? 'Shadow' : ''} ${extraStyle}`} style={size}>
       <div
         className='ImageBlur'
         style={
@@ -51,7 +57,8 @@ Image.defaultProps = {
   size: {
     width: '300px',
     height: '350px'
-  }
+  },
+  extraStyle: ''
 };
 
 export default Image;

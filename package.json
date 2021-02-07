@@ -1,5 +1,5 @@
 {
-  "name": "crown",
+  "name": "crown_components",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
@@ -55,6 +55,6 @@
     "Library"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/OWNER"
+    "registry": "https://registry.npmjs.org/"
   }
 }
