@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<div
+  className="CROWNCheckBox "
+>
+  <input
+    checked={false}
+    className="Active"
+    id={1234}
+    onChange={[Function]}
+    type="checkbox"
+  />
+</div>
+`;

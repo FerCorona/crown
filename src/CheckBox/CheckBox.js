@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Label from '../Label';
 
 const CheckBox = ({
+  id,
   text,
   onChange,
   isChecked,
@@ -13,7 +14,7 @@ const CheckBox = ({
 }) => (
   <div className={`CROWNCheckBox ${extraStyle}`}>
     <input
-      id={uuidv4()}
+      id={id || uuidv4()}
       type='checkbox'
       className='Active'
       onChange={() => onChange({

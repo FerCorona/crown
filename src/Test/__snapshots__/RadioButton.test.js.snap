@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<div
+  aria-labelledby="bulgy-radios-label"
+  className="CROWNRadioButton "
+  role="radiogroup"
+>
+  <label>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="radio"
+      value="si_option"
+    />
+    <span
+      className="Radio"
+    />
+    <div
+      className="Label"
+    >
+      <div
+        className="CROWNLabel "
+        style={
+          Object {
+            "color": "var(--black-1)",
+            "fontSize": "small",
+            "fontWeight": "400",
+          }
+        }
+      >
+        Si
+      </div>
+    </div>
+  </label>
+  <label>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="radio"
+      value="no_option"
+    />
+    <span
+      className="Radio"
+    />
+    <div
+      className="Label"
+    >
+      <div
+        className="CROWNLabel "
+        style={
+          Object {
+            "color": "var(--black-1)",
+            "fontSize": "small",
+            "fontWeight": "400",
+          }
+        }
+      >
+        No
+      </div>
+    </div>
+  </label>
+  <label>
+    <input
+      checked={false}
+      onChange={[Function]}
+      type="radio"
+      value="tal_vez_option"
+    />
+    <span
+      className="Radio"
+    />
+    <div
+      className="Label"
+    >
+      <div
+        className="CROWNLabel "
+        style={
+          Object {
+            "color": "var(--black-1)",
+            "fontSize": "small",
+            "fontWeight": "400",
+          }
+        }
+      >
+        Tal vez
+      </div>
+    </div>
+  </label>
+</div>
+`;

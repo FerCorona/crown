@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<div
+  className="CROWNCard "
+>
+  <div
+    className="Card"
+    style={
+      Object {
+        "backgroundImage": "url(linear-gradient(var(--red-4), var(--pink-1)))",
+        "backgroundPosition": "center",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "cover",
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="Content"
+    >
+      <div
+        className="Title"
+      >
+        Card Title
+      </div>
+      <div
+        className="ContentCard"
+      >
+        Card Content  ---- Card Content ---- Card Content  ---- Card Content ---- Card Content  ---- Card Content ---- Card Content  ---- Card Content ----
+      </div>
+      <div
+        className="Others"
+      >
+        <a
+          className="CROWNButton Square "
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "var(--gray-blue-3)",
+              "boxShadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+              "color": "var(--white)",
+            }
+          }
+        >
+          Aceptar
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

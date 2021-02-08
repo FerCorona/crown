@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<div
+  className="CROWNDropDown "
+>
+  <div
+    className="Options"
+    onClick={[Function]}
+  />
+</div>
+`;

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<div
+  className="CROWNImage Shadow "
+  style={
+    Object {
+      "height": "350px",
+      "width": "300px",
+    }
+  }
+>
+  <div
+    className="ImageBlur"
+    style={
+      Object {
+        "backgroundImage": "linear-gradient(45deg, var(--red-1), var(--pink-1))",
+        "backgroundPosition": "center",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "cover",
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="Blur"
+    >
+      <div
+        className="Image"
+        style={
+          Object {
+            "backgroundImage": "linear-gradient(45deg, var(--red-1), var(--pink-1))",
+            "backgroundPosition": "center",
+            "backgroundRepeat": "no-repeat",
+            "backgroundSize": "cover",
+            "position": "relative",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

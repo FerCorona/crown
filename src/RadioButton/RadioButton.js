@@ -11,8 +11,8 @@ const RadioButton = ({
 }) => (
   <div className={`CROWNRadioButton ${extraStyle}`} role='radiogroup' aria-labelledby='bulgy-radios-label'>
     {
-      options.map(option => (
-        <label>
+      options.map((option, key) => (
+        <label key={key}>
           <input
             type='radio'
             value={option.id}

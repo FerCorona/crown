@@ -8,16 +8,16 @@ const Table = ({
   <table className={`CROWNTable ${extraStyle}`}>
     <thead>
       <tr className='Header'>
-        {header.map(head => (
-          <th>{head}</th>
+        {header.map((head, key) => (
+          <th key={`head-${key}`}>{head}</th>
         ))}
       </tr>
     </thead>
     <tbody>
-      {body.map(row => (
-        <tr className='Body'>
-          {row.map(cell => (
-            <td>{cell}</td>
+      {body.map((row, key_row) => (
+        <tr className='Body' key={`row${key_row}`}>
+          {row.map((cell, key_cell) => (
+            <td key={`cell${key_cell}`}>{cell}</td>
           ))}
         </tr>
       ))}

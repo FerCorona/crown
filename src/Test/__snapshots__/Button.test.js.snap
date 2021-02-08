@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when hovered 1`] = `
+<a
+  className="CROWNButton Round "
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "var(--blue-4)",
+      "boxShadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+      "color": "var(--white)",
+    }
+  }
+>
+  Click Me!
+</a>
+`;
+
+exports[`Link changes the class when hovered 2`] = `
+<a
+  className="CROWNButton Round "
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "var(--blue-4)",
+      "boxShadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+      "color": "var(--white)",
+    }
+  }
+>
+  Click Me!
+</a>
+`;
